@@ -1,45 +1,45 @@
 var db = require("../models");
 
 module.exports = function(app) {
-    app.get("/api/Recipe", function(req, res) {
+    app.get("/api/categories", function(req, res) {
         //Add an "include" property to our options in our findAll query
         //Sets the value to an array of the models included in a left outer join
         // db.Post
-        db.Recipe.findAll({
-            include: [db.Post]
-        }).then(function(dbRecipe) {
-            res.json(dbRecipe);
+        db.Category.findAll({
+            include: [db.Recipe]
+        }).then(function(dbCategory) {
+            res.json(dbCategory);
         });
 
     });
 
-    app.get("/api/Recipe/:id", function(req, res) {
+    app.get("/api/categories/:id", function(req, res) {
         ///Add an "include" property to our options in our findOne query
         //Sets the value to an array of the models included in a left outer join
         // db.Post
-        db.Recipe.findOne({
+        db.Category.findOne({
             where: {
                 id: req.params.id
             },
-            include: [db.Post]
-        }).then(function(dbRecipe) {
-            res.json(dbRecipe);
+            include: [db.Recipe]
+        }).then(function(dbCategory) {
+            res.json(dbCategory);
         });
     });
 
-    app.post("/api/Recipe", function(req, res) {
-        db.Recipe.create(req.body).then(function(dbRecipe) {
-            res.json(dbRecipe);
+    app.post("/api/categories", function(req, res) {
+        db.Category.create(req.body).then(function(dbCategory) {
+            res.json(dbCategory);
         });
     });
 
-    app.delete("/api/Recipe/:id", function(req, res) {
-        db.Recipe.destroy({
+    app.delete("/api/categories/:id", function(req, res) {
+        db.Category.destroy({
             where: {
                 id: req.params.id
             }
-        }).then(function(dbRecipe) {
-            res.json(dbRecipe);
+        }).then(function(dbCategory) {
+            res.json(dbCategory);
         });
     });
 };

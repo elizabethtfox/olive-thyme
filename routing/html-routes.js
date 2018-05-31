@@ -8,22 +8,33 @@ module.exports = function(app) {
 
 //Routes for handling a specific HTML page that the user gets sent to
 //index route loads create newrecipe.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/newrecipe.html"));
+  app.get("/main", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/main.html"));
+  });
+
+  //Options
+  app.get("/options", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/options.html"));
+  });
+
+
+  //Create new recipe
+  app.get("/recipe", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/recipe.html"));
   });
 
 //saved recipes route loads savedrecipes.html
-  app.get("/savedrecipe", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/savedrecipe.html"));
+  app.get("/savedRecipes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/savedRecipes.html"));
   });
 
   //shopping list route loads shoppinglist.html
-  app.get("/shoppinglist", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/shoppinglist.html"));
+  app.get("/shoppingList", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/shoppingList.html"));
   });
 
   //categories route loads categories.html
-  app.get("/category", function(req, res) {
+  app.get("/categories", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/category.html"));
   });
 
