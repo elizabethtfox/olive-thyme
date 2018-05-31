@@ -32,40 +32,4 @@ db.sequelize.sync({ force: true }).then(function() {
   });
 
 
-  //login route if password matches (for loop????)
-  
-  //login route if password matches (for loop????)
-  //------------------------------------------------------------------------------------------------------------------------------//
-  var objPeople = [
-    {
-      username: "elizabeth",
-      password: "codify"
-    },
-
-    {
-      username: "mariam",
-      password: "academy"
-
-    },
-
-    {
-      username: "catherine",
-      password: "today"
-
-    }
-  ]
-
-  function getInfo() {
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-
-    for (i = 0; i < objPeople.length; i++) {
-      if (username == objPeople[i].username && passWord == objPeople[i].passWord) {
-        console.log(username + "is logged in!!")
-        return
-      }
-    }
-    console.log("incorrect username or password")
-
-  }
   
