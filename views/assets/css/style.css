@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background-image: url(/Users/mariamchaudry/gtcbc/homework/olive-thyme/views/assets/images/olives.jpg); 
+    background-repeat: no-repeat
+
+}
+
+.input-field input[type=date]:focus + label,
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label
+
+.input-field input[type=date]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+    box-shadow: none;
+}
+
+h3{
+    font-family: 'Pacifico', cursive;
+}
+
+h4 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 45px; 
+}
+
+#cardBox {
+    margin-top: 60px; 
+    width: 550px;  
+}
+
+#headerPanel {
+    margin-top: 40px; 
+}
+
+
+
+

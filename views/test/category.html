@@ -10,34 +10,58 @@
     <!-- {{! Google Fonts }} -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px" rel="stylesheet">
 
-    <!-- {{! Style Sheet }} -->
-        <link href="./assets/css/style.css" rel="stylesheet" type = "text/css">
-        
-    <!-- {{!Title}} -->
-        <title>Olive &amp; Thyme</title>
-
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
+    <!-- {{! Style Sheet }} -->
+        <link href="../assets/css/style.css" rel="stylesheet" type = "text/css">
+        
+    <!-- {{!Title}} -->
+        <title>Olive &amp; Thyme</title>
+
 </head>
 
 <body>
     <div class="row">
-            <div class="col m10 m5">
+        <div class = "m10">
+            <div class = "card-panel" id = "headerPanel">
+                <h3>What would you like to do?</h3>
+            </div>
+
+            <div class="col m10 m5" id = "cardBox">
             <div class ="card-panel">
-                <span class="optionButtons">
+                <center>
+                <div class="m12" id = "optionButtons">
                     <a class="waves-effect waves-light btn "><i class="material-icons right"></i>Create a New Recipe</a>
+                </div>
+                </center>
 
+                <br>
+                <center>
+                <div>
                     <a class="waves-effect waves-light btn "><i class="material-icons right"></i>View Saved Recipes</a>
+                </div>
+                </center>
 
+                <center>
+                <br>
+                <div>
                     <a class="waves-effect waves-light btn "><i class="material-icons right"></i>Shopping List</a>
+                </div>
+                </center>
 
+                <center>
+                <br>
+                <div>
                     <a class="waves-effect waves-light btn "><i class="material-icons right"></i>Create a Category</a>
-                </span>
+                </div>
+                </center>
+                
             </div>
             </div>
+        </div>
     </div>
 </body>
