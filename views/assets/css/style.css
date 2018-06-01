@@ -30,10 +30,10 @@ h3{
     font-family: 'Pacifico', cursive;
 }
 
-h4 {
+/* h4 {
     font-family: 'Pacifico', cursive;
     font-weight: 45px; 
-}
+} */
 
 #cardBox {
     margin-top: 60px; 
@@ -49,12 +49,27 @@ h4 {
     margin-top: 15px; 
 }
 
+#recipesButton {
+    margin-left: 20px; 
+    margin-top: 15px; 
+}
+
+
+#categoryBox {
+    width: 800px; 
+    height: 600px; 
+    margin-right: 60px;
+}
+
 #recipeBox {
     width: 800px; 
     height: 600px; 
     margin-right: 60px;
 }
 
-
+label {
+    color: black;
+    font-size: 20px;  
+}
 
 
