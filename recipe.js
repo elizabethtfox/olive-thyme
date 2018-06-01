@@ -1,13 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
     var Recipe = sequelize.define("Recipe", {
-        title: {
+        recipe_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        body: {
+        recipe_ingredients: {
+        type: DataTypes.TEXT,
+            allowNull: false,
+            len: [1]
+        },
+        recipe_directions: {
             type: DataTypes.TEXT,
             allowNull: false,
             len: [1]
