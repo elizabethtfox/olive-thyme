@@ -44,6 +44,17 @@ h4 {
     margin-top: 40px; 
 }
 
+#homeButton {
+    margin-left: 20px; 
+    margin-top: 15px; 
+}
+
+#recipeBox {
+    width: 800px; 
+    height: 600px; 
+    margin-right: 60px;
+}
+
 
 
 
