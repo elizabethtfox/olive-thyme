@@ -28,14 +28,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/savedRecipes.html"));
   });
 
+//categories route loads categories.html
+  app.get("/categories", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/category.html"));
+  });
+
   //shopping list route loads shoppinglist.html
   app.get("/shoppingList", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/shoppingList.html"));
-  });
-
-  //categories route loads categories.html
-  app.get("/categories", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/category.html"));
   });
 
 };
