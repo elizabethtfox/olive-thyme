@@ -1,13 +1,13 @@
 $(document).ready(function() {
     //Getting references to the category input and category container, as well as the table body
-    var categoryInput = $("category-name");
+    var categoryInput = $("#category-name");
     var categoryList = $("tbody");
     var categoryContainer =$(".category-container");
 
     //Adding event listeners to the form to create a new object, and the button to delete 
     //A category
     $(document).on("submit", "#category-form", handleCategoryFormSubmit);
-    $(document).on("click", ".delete-author", handleDeleteButtonPress);
+    $(document).on("click", ".delete-category", handleDeleteButtonPress);
 
     //Getting the initial list of categories
     getCategories();
@@ -32,7 +32,7 @@ $(document).ready(function() {
         .then(getCategory);
     }
 
-    // Function for creating a new list row for authors
+    // Function for creating a new list row for categories
     function createCategoryRow(categoryData) {
         var newTr = $("<tr>");
         newTr.data("category", categoryData);
@@ -49,7 +49,7 @@ $(document).ready(function() {
     } 
 
     //Function for retrieving categories and getting them ready to be rendered to the page
-    function getCategories() {
+    function getCategory() {
         $.get("/api/categories", function(data) {
             var rowsToAdd = [];
             for (var i = 0; i < data.length; i++) {
@@ -84,13 +84,13 @@ $(document).ready(function() {
 
     //Function for handling what happens when the delete button is pressed
     function handleDeleteButtonPress() {
-        var listItemData = $(this).parent("td").parent("tr").data("author");
+        var listItemData = $(this).parent("td").parent("tr").data("category");
         var id = listItemData.id;
         $.ajax({
             method: "DELETE",
             url: "/api/categories/" + id
         })
-        .then(getCategories);
+        .then(getCategory);
     }
 });
 
