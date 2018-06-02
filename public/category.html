@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- {{! Handlebars }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.amd.js"></script> -->
+
+    <!-- {{! Google Fonts }} -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald|Slabo 27px" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- {{! Style Sheet }} -->
+    <link href="../assets/css/style.css" rel="stylesheet" type = "text/css">
+
+    <!-- {{!Title}} -->
+    <title>Olive &amp; Thyme</title>
+
+</head>
+<div class = "navbar">
+    <a class="waves-effect waves-light btn" id = "homeButton" href = "../test/main.html"><i class="fa fa-home"></i> Home</a>
+    <a class="waves-effect waves-light btn" id = "recipesButton" href = "../test/options.html">Options</a>
+    <a class="waves-effect waves-light btn" id = "recipesButton" href = "../test/recipe.html">Create a Recipe</a>
+    <a class="waves-effect waves-light btn" id = "recipesButton" href = "../test/savedRecipes.html">Saved Recipes</a>
+    <a class="waves-effect waves-light btn" id = "recipesButton" href = "../test/category.html">Categories</a>
+    <a class="waves-effect waves-light btn" id = "recipesButton" href = "../test/shoppingList.html">Shopping List</a>
+</div>
+
+<body>
+
+<div class="row">
+
+    <body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-2 col-sm-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class = "card-panel" id = "categoryBox">
+                <div class="col-md-8 offset-md-2">
+                    <div class="category-container">
+                        <h3>Categories</h3>
+                        <table align="center" class="table table-striped">
+                            <thead>
+                            <tr align="center">
+                                <th>Name</th>
+                                <th>Delete Category</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr id="form-row">
+                                <form id="category-form">
+                                    <td colspan="10">
+                                        <input placeholder="Enter a name for the new category" id="category-name" type="text"/>
+                                    </td>
+                                    <br>
+                                    <td><a class="waves-effect waves-light btn">Create a Category</a>
+                                    </td>
+                                </form>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
