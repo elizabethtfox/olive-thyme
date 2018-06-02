@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/elizabethtfox/olive-thyme#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "mysql": "^2.15.0"
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.37.10"
   }
 }
